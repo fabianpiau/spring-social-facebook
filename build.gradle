@@ -97,7 +97,6 @@ configure(subprojects - docProjects) { subproject ->
                 }
             }
             repositories {
-		mavenCentral()
                 mavenLocal()
             }
         }
@@ -106,7 +105,6 @@ configure(subprojects - docProjects) { subproject ->
         apply plugin: 'spring-io'
 
         repositories {
-  	    mavenCentral()
             maven { url "https://repo.spring.io/libs-snapshot" }
         }
 
