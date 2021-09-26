@@ -58,7 +58,7 @@ public class FacebookAdapterTest {
 		Field linkField = user.getClass().getDeclaredField("link");
 		linkField.setAccessible(true);
 		linkField.set(user, "https://www.facebook.com/975041837");
-		Mockito.when(facebook.fetchObject("me", User.class, "id", "name", "link")).thenReturn(user);
+		Mockito.when(facebook.fetchObject("me", User.class, "id", "email", "name", "link")).thenReturn(user);
 		Mockito.when(facebook.getBaseGraphApiUrl()).thenReturn(GRAPH_API_URL);
 		TestConnectionValues connectionValues = new TestConnectionValues();
 		apiAdapter.setConnectionValues(facebook, connectionValues);

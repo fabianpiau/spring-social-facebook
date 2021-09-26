@@ -39,7 +39,7 @@ public class FacebookAdapter implements ApiAdapter<Facebook> {
 	}
 
 	public void setConnectionValues(Facebook facebook, ConnectionValues values) {
-		User profile = facebook.fetchObject("me", User.class, "id", "name", "link");
+		User profile = facebook.fetchObject("me", User.class, "id", "email", "name", "link");
 		values.setProviderUserId(profile.getId());
 		values.setDisplayName(profile.getName());
 		values.setProfileUrl(profile.getLink());
